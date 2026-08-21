@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GIVEHOPE Whitepaper v1.0 | $HOPE</title>
+  <meta name="description" content="Official GIVEHOPE ($HOPE) Whitepaper — Transparent crypto funding for children facing life-threatening illnesses.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            hope: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              200: '#bae6fd',
+              300: '#7dd3fc',
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+              800: '#075985',
+              900: '#0c4a6e',
+            },
+            heart: {
+              400: '#f472b6',
+              500: '#ec4899',
+              600: '#db2777',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Poppins', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    .prose h2 { scroll-margin-top: 5rem; }
+    .nav-blur {
+      backdrop-filter: blur(12px);
+      background: rgba(255, 255, 255, 0.9);
+    }
+  </style>
+</head>
+<body class="font-sans text-slate-800 bg-slate-50 antialiased">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 nav-blur border-b border-slate-200/60">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex items-center gap-2">
+          <span class="text-2xl">❤️</span>
+          <span class="font-display font-bold text-xl tracking-tight">GIVE<span class="text-hope-600">HOPE</span></span>
+        </a>
+        <div class="flex items-center gap-4">
+          <a href="index.html" class="text-sm font-medium hover:text-hope-600 transition">← Back to Home</a>
+          <button onclick="window.print()" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-hope-600 text-white text-sm font-semibold hover:bg-hope-700 transition">
+            Download / Print
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="pt-28 pb-12 bg-white border-b border-slate-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-hope-100 text-hope-700 text-xs font-semibold mb-6">
+        Whitepaper v1.0
+      </div>
+      <h1 class="font-display font-extrabold text-4xl sm:text-5xl tracking-tight mb-4">
+        GIVEHOPE Whitepaper
+      </h1>
+      <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+        A transparent, community-driven Solana token dedicated to turning crypto into real medical hope for children fighting life-threatening illnesses.
+      </p>
+      <p class="mt-4 text-sm text-slate-400">August 2026 · Version 1.0</p>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 py-12">
+    <article class="prose prose-slate max-w-none">
+
+      <!-- Image -->
+      <div class="mb-12 rounded-2xl overflow-hidden shadow-lg">
+        <img src="images/hope-child.jpg" alt="A child who needs hope — the face of GIVEHOPE" class="w-full object-cover max-h-80">
+        <p class="text-center text-sm text-slate-500 py-3 bg-slate-50">The reason this project exists.</p>
+      </div>
+
+      <section class="mb-12">
+        <h2 class="font-display font-bold text-2xl text-slate-900 mb-4">1. Introduction</h2>
+        <p class="text-slate-600 leading-relaxed mb-4">
+          GIVEHOPE ($HOPE) is a community token built on Solana with one clear purpose: to channel the energy and capital of the crypto community into tangible medical support for children facing cancer, rare diseases, and other life-threatening conditions.
+        </p>
+        <p class="text-slate-600 leading-relaxed mb-4">
+          Too many families confront devastating diagnoses while also battling financial strain, limited access to care, and the emotional weight of uncertainty. GIVEHOPE exists to reduce that burden — not with vague promises, but with transparent, verifiable on-chain donations and public proof of impact.
+        </p>
+        <p class="text-slate-600 leading-relaxed">
+          This whitepaper outlines the vision, token mechanics, impact model, and commitment to radical transparency that define the project.
+        </p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-display font-bold text-2xl text-slate-900 mb-4">2. The Problem</h2>
+        <ul class="list-disc pl-5 space-y-2 text-slate-600">
+          <li>Childhood cancer and serious illnesses impose enormous financial and emotional costs on families.</li>
+          <li>Traditional fundraising can be slow, opaque, or heavily diluted by overhead.</li>
+          <li>Crypto communities move fast and generate significant capital — yet much of that energy is currently directed toward speculation rather than real-world good.</li>
+          <li>There is a clear opportunity to connect crypto’s speed and transparency with verified medical needs.</li>
+        </ul>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-display font-bold text-2xl text-slate-900 mb-4">3. The Solution: $HOPE</h2>
+        <p class="text-slate-600 leading-relaxed mb-4">
+          $HOPE is a zero-tax Solana token. A meaningful portion of the supply is reserved for an Impact & Donation Treasury. Funds from this treasury (and community contributions) are used to support verified medical needs of children.
+        </p>
+        <p class="text-slate-600 leading-relaxed">
+          Every major donation is recorded on-chain and accompanied by public documentation (transaction hashes, receipts, and impact notes). Holders and the broader public can verify the flow of value independently.
+        </p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-display font-bold text-2xl text-slate-900 mb-4">4. Tokenomics</h2>
+        <div class="overflow-x-auto mb-6">
+          <table class="w-full text-sm text-left border border-slate-200 rounded-xl overflow-hidden">
+            <thead class="bg-slate-100">
+              <tr>
+                <th class="px-4 py-3 font-semibold">Allocation</th>
+                <th class="px-4 py-3 font-semibold">Percentage</th>
+                <th class="px-4 py-3 font-semibold">Notes</th>
+              </tr>
+            </thead>
+            <tbody class="bg-white divide-y divide-slate-100">
+              <tr>
+                <td class="px-4 py-3">Liquidity Pool</td>
+                <td class="px-4 py-3 font-medium">60%</td>
+                <td class="px-4 py-3 text-slate-500">LP burned / locked at launch</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3">Impact & Donation Treasury</td>
+                <td class="px-4 py-3 font-medium">20%</td>
+                <td class="px-4 py-3 text-slate-500">Primary source for medical support</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3">Community & Marketing</td>
+                <td class="px-4 py-3 font-medium">10%</td>
+                <td class="px-4 py-3 text-slate-500">Growth, awareness, partnerships</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3">Team</td>
+                <td class="px-4 py-3 font-medium">10%</td>
+                <td class="px-4 py-3 text-slate-500">Vested — schedule published at launch</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ul class="list-disc pl-5 space-y-2 text-slate-600">
+          <li><strong>Total Supply:</strong> 1,000,000,000 $HOPE</li>
+          <li><strong>Tax:</strong> 0% buy / 0% sell</li>
+          <li><strong>Chain:</strong> Solana</li>
+          <li><strong>Launch:</strong> Fair launch style via Pump.fun / Raydium (details announced via official channels)</li>
+        </ul>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-display font-bold text-2xl text-slate-900 mb-4">5. Impact Model</h2>
+        <p class="text-slate-600 leading-relaxed mb-4">
+          The core of GIVEHOPE is the Impact & Donation Treasury. Funds are deployed according to the following principles:
+        </p>
+        <ol class="list-decimal pl-5 space-y-2 text-slate-600 mb-4">
+          <li><strong>Verification</strong> — Needs are confirmed through reputable medical channels, hospitals, or established support organizations.</li>
+          <li><strong>Directness</strong> — Preference for direct support (treatment costs, equipment, family assistance) over high-overhead intermediaries when possible.</li>
+          <li><strong>Transparency</strong> — Every significant transfer is announced with on-chain proof and supporting documentation.</li>
+          <li><strong>Community Visibility</strong> — Regular impact reports keep holders informed of progress and outcomes.</li>
+        </ol>
+        <p class="text-slate-600 leading-relaxed">
+          Future governance (possible DAO) may allow the community greater input on selection of beneficiaries once the project matures.
+        </p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-display font-bold text-2xl text-slate-900 mb-4">6. Transparency Commitments</h2>
+        <ul class="list-disc pl-5 space-y-2 text-slate-600">
+          <li>Public donation and treasury wallets listed on the website and in this whitepaper (addresses published at launch).</li>
+          <li>All major impact transactions linked and documented.</li>
+          <li>Team vesting schedule made public.</li>
+          <li>Regular written impact updates shared across official channels.</li>
+          <li>No hidden wallets or undisclosed allocations.</li>
+        </ul>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-display font-bold text-2xl text-slate-900 mb-4">7. Roadmap</h2>
+        <div class="space-y-6">
+          <div>
+            <h3 class="font-semibold text-hope-700">Phase 1 — Launch</h3>
+            <p class="text-slate-600 text-sm">Token generation event, website live, community channels opened, whitepaper published, initial liquidity, first public wallet addresses released.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-hope-700">Phase 2 — First Impact</h3>
+            <p class="text-slate-600 text-sm">First verified donation executed and fully documented. Impact report published. Early partnerships explored.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-hope-700">Phase 3 — Community Growth</h3>
+            <p class="text-slate-600 text-sm">Expanded holder base, additional impact rounds, improved transparency tools, community events and awareness campaigns.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-hope-700">Phase 4 — Expanding the Mission</h3>
+            <p class="text-slate-600 text-sm">Larger-scale support programs, potential governance mechanisms, long-term sustainability planning, establishing GIVEHOPE as a lasting force for good.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-display font-bold text-2xl text-slate-900 mb-4">8. Risks & Disclaimers</h2>
+        <p class="text-slate-600 leading-relaxed mb-4">
+          Cryptocurrency tokens involve substantial risk, including the potential for complete loss of value. $HOPE is a community-driven experimental project. It is not a security, investment product, or guarantee of returns.
+        </p>
+        <p class="text-slate-600 leading-relaxed mb-4">
+          The primary purpose of the project is impact. Market performance is secondary and highly uncertain. Always conduct your own research. Never invest more than you can afford to lose.
+        </p>
+        <p class="text-slate-600 leading-relaxed">
+          Medical outcomes depend on many factors beyond the control of this project. While we strive for verified and meaningful support, we make no guarantees regarding specific clinical results.
+        </p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-display font-bold text-2xl text-slate-900 mb-4">9. Closing</h2>
+        <p class="text-slate-600 leading-relaxed mb-4">
+          GIVEHOPE exists because children should not have to fight alone, and families should not have to face impossible choices without support.
+        </p>
+        <p class="text-slate-600 leading-relaxed mb-4">
+          Crypto can be more than charts and speculation. It can be a tool for tangible good — fast, transparent, and global.
+        </p>
+        <p class="text-slate-600 leading-relaxed font-medium">
+          We invite the community to hold $HOPE, hold us accountable, and help turn every transaction into a chance at hope.
+        </p>
+      </section>
+
+      <div class="border-t border-slate-200 pt-8 mt-12 text-center">
+        <p class="text-sm text-slate-500 mb-4">GIVEHOPE Whitepaper v1.0 — August 2026</p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="index.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-hope-600 text-white text-sm font-semibold hover:bg-hope-700 transition">
+            ← Back to Website
+          </a>
+          <button onclick="window.print()" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border border-slate-200 text-slate-700 text-sm font-semibold hover:border-hope-300 transition">
+            Print / Save as PDF
+          </button>
+        </div>
+      </div>
+
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-400 py-8 mt-12">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center text-sm">
+      <p>© 2026 GIVEHOPE. Built with hope.</p>
+      <p class="mt-2 text-xs text-slate-600">Not financial advice. DYOR. Impact first.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

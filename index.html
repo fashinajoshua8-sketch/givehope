@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GIVEHOPE | $HOPE — Giving Children a Chance</title>
+  <meta name="description" content="GIVEHOPE ($HOPE) is a transparent, community-driven Solana token dedicated to funding real medical support for children fighting life-threatening illnesses.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            hope: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              200: '#bae6fd',
+              300: '#7dd3fc',
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+              800: '#075985',
+              900: '#0c4a6e',
+            },
+            heart: {
+              400: '#f472b6',
+              500: '#ec4899',
+              600: '#db2777',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Poppins', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    .gradient-text {
+      background: linear-gradient(135deg, #0ea5e9 0%, #ec4899 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-gradient {
+      background: radial-gradient(ellipse at top, #e0f2fe 0%, #f8fafc 50%, #fff 100%);
+    }
+    .card-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px -10px rgba(14, 165, 233, 0.15);
+    }
+    .pulse-soft {
+      animation: pulse-soft 2.5s infinite;
+    }
+    @keyframes pulse-soft {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
+    }
+    .nav-blur {
+      backdrop-filter: blur(12px);
+      background: rgba(255, 255, 255, 0.85);
+    }
+  </style>
+</head>
+<body class="font-sans text-slate-800 bg-slate-50 antialiased">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 nav-blur border-b border-slate-200/60">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-16">
+        <a href="#home" class="flex items-center gap-2 group">
+          <span class="text-2xl">❤️</span>
+          <span class="font-display font-bold text-xl tracking-tight">GIVE<span class="text-hope-600">HOPE</span></span>
+        </a>
+        <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="#mission" class="hover:text-hope-600 transition">Mission</a>
+          <a href="#impact" class="hover:text-hope-600 transition">Impact</a>
+          <a href="#tokenomics" class="hover:text-hope-600 transition">Tokenomics</a>
+          <a href="#roadmap" class="hover:text-hope-600 transition">Roadmap</a>
+          <a href="#transparency" class="hover:text-hope-600 transition">Transparency</a>
+          <a href="whitepaper.html" class="hover:text-hope-600 transition">Whitepaper</a>
+          <a href="#community" class="hover:text-hope-600 transition">Community</a>
+        </div>
+        <a href="#buy" class="hidden sm:inline-flex items-center px-4 py-2 rounded-full bg-hope-600 text-white text-sm font-semibold hover:bg-hope-700 transition shadow-lg shadow-hope-500/25">
+          Buy $HOPE
+        </a>
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-slate-100">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white">
+      <div class="px-4 py-3 space-y-2 text-sm font-medium">
+        <a href="#mission" class="block py-2 hover:text-hope-600">Mission</a>
+        <a href="#impact" class="block py-2 hover:text-hope-600">Impact</a>
+        <a href="#tokenomics" class="block py-2 hover:text-hope-600">Tokenomics</a>
+        <a href="#roadmap" class="block py-2 hover:text-hope-600">Roadmap</a>
+        <a href="#transparency" class="block py-2 hover:text-hope-600">Transparency</a>
+        <a href="whitepaper.html" class="block py-2 hover:text-hope-600">Whitepaper</a>
+        <a href="#community" class="block py-2 hover:text-hope-600">Community</a>
+        <a href="#buy" class="block py-2 text-hope-600 font-semibold">Buy $HOPE</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="hero-gradient pt-28 pb-20 sm:pt-32 sm:pb-28">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-hope-100 text-hope-700 text-xs font-semibold mb-6">
+            <span class="w-2 h-2 rounded-full bg-hope-500 pulse-soft"></span>
+            Live on Solana
+          </div>
+          <h1 class="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-tight tracking-tight mb-6">
+            Every child deserves<br>
+            <span class="gradient-text">a chance at hope</span>
+          </h1>
+          <p class="text-lg text-slate-600 mb-8 max-w-lg leading-relaxed">
+            $HOPE is more than a token. It’s a transparent, community-powered movement turning crypto into real medical support for children fighting life-threatening illnesses.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="#buy" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-hope-600 text-white font-semibold hover:bg-hope-700 transition shadow-xl shadow-hope-500/30">
+              Buy $HOPE
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+            <a href="#mission" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-white text-slate-700 font-semibold border border-slate-200 hover:border-hope-300 hover:text-hope-700 transition">
+              Our Mission
+            </a>
+          </div>
+
+          <!-- Live stats mock -->
+          <div class="mt-10 grid grid-cols-3 gap-4 max-w-md">
+            <div class="bg-white/80 backdrop-blur rounded-2xl p-4 border border-slate-100 shadow-sm">
+              <div class="text-xs text-slate-500 mb-1">Market Cap</div>
+              <div class="font-bold text-lg text-slate-800" id="mcap">$—</div>
+            </div>
+            <div class="bg-white/80 backdrop-blur rounded-2xl p-4 border border-slate-100 shadow-sm">
+              <div class="text-xs text-slate-500 mb-1">Holders</div>
+              <div class="font-bold text-lg text-slate-800" id="holders">—</div>
+            </div>
+            <div class="bg-white/80 backdrop-blur rounded-2xl p-4 border border-slate-100 shadow-sm">
+              <div class="text-xs text-slate-500 mb-1">Donated</div>
+              <div class="font-bold text-lg text-hope-600" id="donated">$0</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="absolute -inset-4 bg-gradient-to-br from-hope-200/40 to-heart-400/20 rounded-3xl blur-2xl"></div>
+          <img src="images/hope-child.jpg" alt="A young child receiving care — the reason GIVEHOPE exists" 
+               class="relative rounded-2xl shadow-2xl w-full object-cover aspect-[16/10] border-4 border-white">
+          <div class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md rounded-xl p-4 shadow-lg">
+            <p class="text-sm font-medium text-slate-700">This is why we build. Real children. Real battles. Real hope.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission -->
+  <section id="mission" class="py-20 sm:py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="font-display font-bold text-3xl sm:text-4xl mb-4">Our Mission ❤️</h2>
+        <p class="text-slate-600 text-lg">Turning blockchain transparency into life-changing medical support for children who need it most.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="card-hover bg-slate-50 rounded-2xl p-8 border border-slate-100">
+          <div class="w-12 h-12 rounded-xl bg-hope-100 flex items-center justify-center text-2xl mb-5">📖</div>
+          <h3 class="font-display font-bold text-xl mb-3">The Story</h3>
+          <p class="text-slate-600 leading-relaxed">
+            GIVEHOPE was born from a simple truth: too many children face devastating diagnoses while families struggle with costs, access, and hope. We created $HOPE so the crypto community can directly fund treatments, equipment, and support — with full on-chain transparency.
+          </p>
+        </div>
+        <div class="card-hover bg-slate-50 rounded-2xl p-8 border border-slate-100">
+          <div class="w-12 h-12 rounded-xl bg-heart-400/20 flex items-center justify-center text-2xl mb-5">🧒</div>
+          <h3 class="font-display font-bold text-xl mb-3">Who We Support</h3>
+          <p class="text-slate-600 leading-relaxed">
+            Children battling cancer, rare diseases, and other life-threatening conditions. We work with verified medical needs, hospitals, and families so every contribution reaches real people in real need — not marketing budgets.
+          </p>
+        </div>
+        <div class="card-hover bg-slate-50 rounded-2xl p-8 border border-slate-100">
+          <div class="w-12 h-12 rounded-xl bg-hope-100 flex items-center justify-center text-2xl mb-5">🎯</div>
+          <h3 class="font-display font-bold text-xl mb-3">Why It Exists</h3>
+          <p class="text-slate-600 leading-relaxed">
+            Crypto has power. We channel that power into measurable impact. No vague “charity”. Just clear goals, public wallets, proof of donations, and a community that refuses to look away.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact -->
+  <section id="impact" class="py-20 sm:py-28 bg-slate-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="font-display font-bold text-3xl sm:text-4xl mb-4">Impact</h2>
+        <p class="text-slate-600 text-lg">Every transaction can become a treatment, a toy, a night of rest for a family, or a chance at tomorrow.</p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-10 items-center mb-16">
+        <img src="images/hope-child.jpg" alt="Child in hospital — GIVEHOPE impact" class="rounded-2xl shadow-xl w-full object-cover">
+        <div>
+          <h3 class="font-display font-bold text-2xl mb-4">Proof Over Promises</h3>
+          <ul class="space-y-4 text-slate-600">
+            <li class="flex gap-3">
+              <span class="text-hope-500 font-bold">✓</span>
+              <span><strong>Donations</strong> — Direct transfers from the donation wallet to verified medical needs and partner organizations.</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-hope-500 font-bold">✓</span>
+              <span><strong>Proof of donations</strong> — Every significant transfer is documented with receipts, hospital confirmations, and on-chain records.</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-hope-500 font-bold">✓</span>
+              <span><strong>Impact updates</strong> — Regular community reports showing exactly where funds went and the difference they made.</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-hope-500 font-bold">✓</span>
+              <span><strong>Future beneficiaries</strong> — Transparent queue for selecting and supporting the next children and families.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm text-center">
+        <p class="text-slate-500 text-sm mb-2">Total verified impact to date</p>
+        <p class="font-display font-bold text-4xl text-hope-600 mb-1">$0+</p>
+        <p class="text-slate-400 text-sm">Launching soon — first impact coming after token launch</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tokenomics -->
+  <section id="tokenomics" class="py-20 sm:py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="font-display font-bold text-3xl sm:text-4xl mb-4">Tokenomics</h2>
+        <p class="text-slate-600 text-lg">Designed for sustainability, transparency, and maximum real-world impact.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div class="bg-slate-50 rounded-2xl p-6 border border-slate-100 text-center card-hover">
+          <div class="text-3xl font-display font-bold text-hope-600 mb-1">1B</div>
+          <div class="text-sm text-slate-500">Total Supply</div>
+        </div>
+        <div class="bg-slate-50 rounded-2xl p-6 border border-slate-100 text-center card-hover">
+          <div class="text-3xl font-display font-bold text-hope-600 mb-1">0%</div>
+          <div class="text-sm text-slate-500">Tax / Buy-Sell</div>
+        </div>
+        <div class="bg-slate-50 rounded-2xl p-6 border border-slate-100 text-center card-hover">
+          <div class="text-3xl font-display font-bold text-hope-600 mb-1">LP Burned</div>
+          <div class="text-sm text-slate-500">Liquidity Locked</div>
+        </div>
+        <div class="bg-slate-50 rounded-2xl p-6 border border-slate-100 text-center card-hover">
+          <div class="text-3xl font-display font-bold text-hope-600 mb-1">Solana</div>
+          <div class="text-sm text-slate-500">Blockchain</div>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100">
+          <h3 class="font-display font-bold text-xl mb-6">Distribution</h3>
+          <div class="space-y-4">
+            <div>
+              <div class="flex justify-between text-sm mb-1"><span>Liquidity Pool</span><span class="font-semibold">60%</span></div>
+              <div class="h-2 bg-slate-200 rounded-full overflow-hidden"><div class="h-full bg-hope-500 rounded-full" style="width:60%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-1"><span>Impact & Donation Treasury</span><span class="font-semibold">20%</span></div>
+              <div class="h-2 bg-slate-200 rounded-full overflow-hidden"><div class="h-full bg-heart-500 rounded-full" style="width:20%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-1"><span>Community & Marketing</span><span class="font-semibold">10%</span></div>
+              <div class="h-2 bg-slate-200 rounded-full overflow-hidden"><div class="h-full bg-hope-400 rounded-full" style="width:10%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-1"><span>Team (vested)</span><span class="font-semibold">10%</span></div>
+              <div class="h-2 bg-slate-200 rounded-full overflow-hidden"><div class="h-full bg-slate-400 rounded-full" style="width:10%"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100">
+          <h3 class="font-display font-bold text-xl mb-6">Wallets & Transparency</h3>
+          <ul class="space-y-3 text-sm text-slate-600">
+            <li class="flex items-start gap-2">
+              <span class="text-hope-500 mt-0.5">•</span>
+              <span><strong>Donation Wallet</strong> — Public, multi-sig preferred. All impact funds flow through here.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-hope-500 mt-0.5">•</span>
+              <span><strong>Treasury</strong> — Operations + future impact reserve. Fully visible on-chain.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-hope-500 mt-0.5">•</span>
+              <span><strong>Team Wallet</strong> — Vesting schedule published. No dumps.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-hope-500 mt-0.5">•</span>
+              <span>All major wallets will be listed on this page and in the whitepaper at launch.</span>
+            </li>
+          </ul>
+          <p class="mt-6 text-xs text-slate-400">Addresses will be published at token launch. Check Transparency section for live links.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmap -->
+  <section id="roadmap" class="py-20 sm:py-28 bg-slate-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="font-display font-bold text-3xl sm:text-4xl mb-4">Roadmap</h2>
+        <p class="text-slate-600 text-lg">From launch to lasting impact.</p>
+      </div>
+
+      <div class="relative">
+        <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-hope-200 -translate-x-1/2"></div>
+        <div class="space-y-12">
+          <!-- Phase 1 -->
+          <div class="relative md:grid md:grid-cols-2 md:gap-12 items-center">
+            <div class="md:text-right">
+              <div class="inline-block bg-hope-600 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Phase 1</div>
+              <h3 class="font-display font-bold text-xl mb-2">Launch</h3>
+              <p class="text-slate-600 text-sm">Token launch on Solana (Pump.fun / Raydium). Website live. Community channels open. First liquidity added. Whitepaper published.</p>
+            </div>
+            <div class="hidden md:flex justify-start">
+              <div class="w-4 h-4 rounded-full bg-hope-600 border-4 border-white shadow relative z-10"></div>
+            </div>
+          </div>
+          <!-- Phase 2 -->
+          <div class="relative md:grid md:grid-cols-2 md:gap-12 items-center">
+            <div class="md:order-2">
+              <div class="inline-block bg-hope-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Phase 2</div>
+              <h3 class="font-display font-bold text-xl mb-2">First Impact</h3>
+              <p class="text-slate-600 text-sm">First verified donation executed. Public proof posted. Impact report shared with community. Early partnerships with medical support orgs.</p>
+            </div>
+            <div class="hidden md:flex justify-end md:order-1">
+              <div class="w-4 h-4 rounded-full bg-hope-500 border-4 border-white shadow relative z-10"></div>
+            </div>
+          </div>
+          <!-- Phase 3 -->
+          <div class="relative md:grid md:grid-cols-2 md:gap-12 items-center">
+            <div class="md:text-right">
+              <div class="inline-block bg-hope-400 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Phase 3</div>
+              <h3 class="font-display font-bold text-xl mb-2">Community Growth</h3>
+              <p class="text-slate-600 text-sm">Holder growth, partnerships, merch, community events. Expanded transparency dashboard. More beneficiaries supported.</p>
+            </div>
+            <div class="hidden md:flex justify-start">
+              <div class="w-4 h-4 rounded-full bg-hope-400 border-4 border-white shadow relative z-10"></div>
+            </div>
+          </div>
+          <!-- Phase 4 -->
+          <div class="relative md:grid md:grid-cols-2 md:gap-12 items-center">
+            <div class="md:order-2">
+              <div class="inline-block bg-heart-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Phase 4</div>
+              <h3 class="font-display font-bold text-xl mb-2">Expanding the Mission</h3>
+              <p class="text-slate-600 text-sm">Larger-scale support programs. Possible DAO governance for impact decisions. Long-term sustainability model. Making GIVEHOPE a permanent force for good.</p>
+            </div>
+            <div class="hidden md:flex justify-end md:order-1">
+              <div class="w-4 h-4 rounded-full bg-heart-500 border-4 border-white shadow relative z-10"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Transparency -->
+  <section id="transparency" class="py-20 sm:py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="font-display font-bold text-3xl sm:text-4xl mb-4">Transparency 🔎</h2>
+        <p class="text-slate-600 text-lg">No black boxes. Every major flow is on-chain and public.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 card-hover">
+          <h3 class="font-display font-bold text-lg mb-3">Treasury & Donation Wallet</h3>
+          <p class="text-slate-600 text-sm mb-4">Public addresses will be published at launch. Multi-signature recommended for impact funds.</p>
+          <div class="bg-white rounded-xl p-4 font-mono text-xs text-slate-500 break-all border border-slate-200">
+            Donation Wallet: Coming at launch<br>
+            Treasury: Coming at launch
+          </div>
+        </div>
+        <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 card-hover">
+          <h3 class="font-display font-bold text-lg mb-3">On-chain Transactions</h3>
+          <p class="text-slate-600 text-sm mb-4">All significant movements are visible on Solscan / Solana explorers. We will link every major donation here.</p>
+          <div class="bg-white rounded-xl p-4 font-mono text-xs text-slate-500 border border-slate-200">
+            Live transaction feed → Coming soon
+          </div>
+        </div>
+        <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 card-hover md:col-span-2">
+          <h3 class="font-display font-bold text-lg mb-3">Receipts & Proof</h3>
+          <p class="text-slate-600 text-sm">For every impact donation we will publish: transaction hash, amount, recipient confirmation / receipt, and a short impact note. Community can verify everything independently.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Buy -->
+  <section id="buy" class="py-20 sm:py-28 bg-gradient-to-br from-hope-600 to-hope-800 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <h2 class="font-display font-bold text-3xl sm:text-4xl mb-4">Buy $HOPE</h2>
+      <p class="text-hope-100 text-lg mb-10 max-w-2xl mx-auto">Join the movement. Every holder helps turn crypto into real hope for children who need it.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="#" class="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-hope-700 font-bold hover:bg-hope-50 transition shadow-xl">
+          Pump.fun
+        </a>
+        <a href="#" class="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-hope-500/30 border border-white/30 text-white font-bold hover:bg-hope-500/50 transition">
+          Jupiter
+        </a>
+        <a href="#" class="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-hope-500/30 border border-white/30 text-white font-bold hover:bg-hope-500/50 transition">
+          Raydium
+        </a>
+      </div>
+      <p class="mt-8 text-hope-200 text-sm">Contract address will be published at launch. Always verify CA from official channels only.</p>
+    </div>
+  </section>
+
+  <!-- Community -->
+  <section id="community" class="py-20 sm:py-28 bg-slate-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+      <h2 class="font-display font-bold text-3xl sm:text-4xl mb-4">Community</h2>
+      <p class="text-slate-600 text-lg mb-12">This only works if we do it together.</p>
+      <div class="flex flex-wrap justify-center gap-6">
+        <a href="#" class="flex items-center gap-3 px-6 py-4 bg-white rounded-2xl border border-slate-200 hover:border-hope-300 hover:shadow-lg transition card-hover">
+          <span class="text-2xl">𝕏</span>
+          <span class="font-semibold">X / Twitter</span>
+        </a>
+        <a href="#" class="flex items-center gap-3 px-6 py-4 bg-white rounded-2xl border border-slate-200 hover:border-hope-300 hover:shadow-lg transition card-hover">
+          <span class="text-2xl">✈️</span>
+          <span class="font-semibold">Telegram</span>
+        </a>
+        <a href="#" class="flex items-center gap-3 px-6 py-4 bg-white rounded-2xl border border-slate-200 hover:border-hope-300 hover:shadow-lg transition card-hover">
+          <span class="text-2xl">💬</span>
+          <span class="font-semibold">Discord</span>
+        </a>
+      </div>
+      <p class="mt-10 text-sm text-slate-400">Official links only. Beware of scams and fake groups.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-400 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="flex items-center gap-2">
+          <span class="text-xl">❤️</span>
+          <span class="font-display font-bold text-white">GIVEHOPE</span>
+        </div>
+        <div class="flex gap-6 text-sm">
+          <a href="whitepaper.html" class="hover:text-white transition">Whitepaper</a>
+          <a href="#transparency" class="hover:text-white transition">Transparency</a>
+          <a href="#community" class="hover:text-white transition">Community</a>
+        </div>
+        <p class="text-xs text-slate-500">© 2026 GIVEHOPE. Built with hope.</p>
+      </div>
+      <p class="mt-8 text-center text-xs text-slate-600 max-w-2xl mx-auto">
+        $HOPE is a community token. Cryptocurrency involves risk. This is not financial advice. Always do your own research. Impact donations are the core purpose of this project.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+
+    // Close mobile menu on link click
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => menu.classList.add('hidden'));
+    });
+
+    // Simple placeholder for live stats (replace with real API later)
+    // Example: document.getElementById('mcap').textContent = '$12.4K';
+  </script>
+</body>
+</html>
